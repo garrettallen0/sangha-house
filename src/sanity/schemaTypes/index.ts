@@ -5,5 +5,5 @@ import page from './page'
 export const schemaTypes = [event, page]
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [],
+  types: schemaTypes,
 }

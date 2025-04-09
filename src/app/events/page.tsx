@@ -15,12 +15,28 @@ async function getEvents() {
     image,
     registrationLink
   }`
+  console.log('Fetching events with query:', query)
   const events = await client.fetch(query)
+  console.log('Fetched events:', events)
   return events
 }
 
 export default async function Events() {
   const events = await getEvents()
+  console.log('Events in component:', events)
+
+  if (!events || events.length === 0) {
+    return (
+      <div className="text-center">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Upcoming Events
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          No events scheduled at this time. Please check back later.
+        </p>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-8">

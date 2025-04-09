@@ -14,6 +14,10 @@ const nextConfig = {
       },
     ];
   },
+  // Configure image domains
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
 };
 
 module.exports = nextConfig; 
