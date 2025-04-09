@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -25,21 +24,6 @@ export default function Home() {
           >
             View Events <span aria-hidden="true">→</span>
           </Link>
-        </div>
-      </section>
-
-      {/* Welcome Image Section */}
-      <section className="py-8">
-        <div className="max-w-xl mx-auto px-4">
-          <div className="border border-gray-200 rounded-lg overflow-hidden">
-            <Image
-              src="/images/welcome.jpg"
-              alt="Welcome to Sangha House"
-              width={600}
-              height={450}
-              className="w-full h-auto"
-            />
-          </div>
         </div>
       </section>
 
