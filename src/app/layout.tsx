@@ -6,7 +6,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sangha House",
+  title: "Sangha House LA",
   description: "A community of mindful living",
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
                   <Link href="/" className="text-xl font-bold text-gray-900">
-                    Sangha House
+                    Sangha House LA
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
