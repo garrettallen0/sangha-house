@@ -1,16 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-8 sm:space-y-16">
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Sangha House LA
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-          A community dedicated to mindful living, personal growth, and collective well-being.
+          We are an intentional community in the Plum Village tradition of Thich Nhat Hahn. We are an offshoot of the <a 
+            href="https://lachsangha.wixsite.com/breathe" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline hover:text-indigo-600"
+          >
+            Los Angeles Compassionate Heart Sangha</a>, which meets at the Angel City Zen Center. We came together to support each other in our practice.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
@@ -29,7 +36,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12">
+      <section className="py-6 sm:py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-lg bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900">Community</h3>
@@ -53,8 +60,8 @@ export default function Home() {
       </section>
 
       {/* Image Section */}
-      <section className="py-12">
-        <div className="relative w-full h-[400px]">
+      <section className="py-6 sm:py-12">
+        <div className="relative w-full h-[300px] sm:h-[400px]">
           <Image
             src="/images/IMG_7643.webp"
             alt="Sangha House LA"
@@ -62,6 +69,11 @@ export default function Home() {
             className="object-contain rounded-lg"
           />
         </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-6 sm:py-12">
+        <NewsletterSignup />
       </section>
     </div>
   )
