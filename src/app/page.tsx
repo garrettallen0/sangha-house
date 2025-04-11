@@ -4,7 +4,7 @@ import NewsletterSignup from '@/components/NewsletterSignup'
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-8 sm:space-y-16">
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12">
+      <section className="py-6 sm:py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-lg bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold text-gray-900">Community</h3>
@@ -54,8 +54,8 @@ export default function Home() {
       </section>
 
       {/* Image Section */}
-      <section className="py-12">
-        <div className="relative w-full h-[400px]">
+      <section className="py-6 sm:py-12">
+        <div className="relative w-full h-[300px] sm:h-[400px]">
           <Image
             src="/images/IMG_7643.webp"
             alt="Sangha House LA"
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-12">
+      <section className="py-6 sm:py-12">
         <NewsletterSignup />
       </section>
     </div>
