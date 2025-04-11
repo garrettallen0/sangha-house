@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export default function Home() {
   return (
@@ -62,6 +63,11 @@ export default function Home() {
             className="object-contain rounded-lg"
           />
         </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-12">
+        <NewsletterSignup />
       </section>
     </div>
   )
