@@ -5,7 +5,7 @@ export default function NewsletterSignup() {
         Stay Connected
       </h2>
       <p className="mt-4 text-lg text-gray-600">
-        Subscribe to our newsletter to stay in touch. We will send out details about upcoming events and occasional updates.
+        Subscribe to our newsletter to stay in touch! We send out occasional reflections, updates, and information about upcoming events.
       </p>
 
       <div className="flex justify-center mt-8">

@@ -11,7 +11,13 @@ export default function Home() {
           Sangha House LA
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-          A community dedicated to mindful living, personal growth, and collective well-being.
+          We are an intentional community in the Plum Village tradition of Thich Nhat Hahn. We are an offshoot of the <a 
+            href="https://lachsangha.wixsite.com/breathe" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline hover:text-indigo-600"
+          >
+            Los Angeles Compassionate Heart Sangha</a>, which meets at the Angel City Zen Center. We came together to support each other in our practice.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
