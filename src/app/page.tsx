@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -48,6 +49,18 @@ export default function Home() {
               Explore personal development and spiritual growth in a nurturing environment.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="py-12">
+        <div className="relative w-full h-[400px]">
+          <Image
+            src="/images/IMG_7643.webp"
+            alt="Sangha House LA"
+            fill
+            className="object-contain rounded-lg"
+          />
         </div>
       </section>
     </div>
