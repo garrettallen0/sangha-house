@@ -37,6 +37,28 @@ export default function Navigation() {
               </Link>
             </div>
           </div>
+          <div className="hidden sm:flex sm:items-center">
+            <Link
+              href="/start-sangha"
+              className="text-indigo-700 hover:text-indigo-900 inline-flex items-center text-sm font-medium"
+            >
+              Start your own Sangha House{' '}
+              <svg
+                className="ml-1 h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
           <div className="flex items-center sm:hidden">
             <button
               type="button"
@@ -102,6 +124,27 @@ export default function Navigation() {
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             Contact
+          </Link>
+          <div className="border-t border-gray-200 my-2"></div>
+          <Link
+            href="/start-sangha"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
+          >
+            Start your own Sangha House{' '}
+            <svg
+              className="inline-block ml-1 h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </Link>
         </div>
       </div>
