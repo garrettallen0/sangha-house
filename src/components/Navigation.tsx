@@ -40,7 +40,7 @@ export default function Navigation() {
           <div className="hidden sm:flex sm:items-center">
             <Link
               href="/start-sangha"
-              className="text-indigo-700 hover:text-indigo-900 inline-flex items-center text-sm font-medium"
+              className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               Start your own Sangha House{' '}
               <svg
