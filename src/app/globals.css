@@ -2,6 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FullCalendar styles */
+.fc {
+  @apply font-sans;
+  min-width: 320px;
+}
+
+.fc .fc-toolbar {
+  @apply grid grid-cols-3 items-center p-2;
+}
+
+.fc .fc-toolbar-title {
+  @apply text-lg md:text-xl font-semibold;
+}
+
+.fc .fc-toolbar-chunk {
+  @apply flex items-center;
+}
+
+.fc .fc-toolbar-chunk:first-child {
+  @apply justify-start;
+}
+
+.fc .fc-toolbar-chunk:nth-child(2) {
+  @apply justify-center;
+}
+
+.fc .fc-toolbar-chunk:last-child {
+  @apply justify-end;
+}
+
+.fc .fc-button {
+  @apply bg-white text-gray-700 border border-gray-300 rounded-md px-2 py-1 md:px-3 md:py-2 text-xs md:text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.fc .fc-button-primary {
+  @apply bg-indigo-600 text-white border-transparent hover:bg-indigo-700;
+}
+
+.fc .fc-event {
+  @apply bg-indigo-600 border-indigo-600 text-white cursor-pointer text-[10px] md:text-xs;
+  padding: 1px 2px;
+  margin: 1px 0;
+}
+
+.fc .fc-event-title {
+  @apply text-[10px] md:text-xs;
+}
+
+.fc .fc-event-time {
+  @apply text-[8px] md:text-[10px];
+}
+
+.fc .fc-event:hover {
+  @apply bg-indigo-700;
+}
+
+.fc .fc-day-today {
+  @apply bg-indigo-50;
+}
+
+.fc .fc-daygrid-day-number {
+  @apply text-xs md:text-sm;
+}
+
+.fc .fc-col-header-cell {
+  @apply text-xs md:text-sm;
+}
+
+.fc .fc-timegrid-slot {
+  @apply text-[10px] md:text-xs;
+}
+
+.fc .fc-timegrid-slot-label {
+  @apply text-[10px] md:text-xs;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .fc {
+    @apply min-w-[320px];
+  }
+
+  .fc .fc-toolbar {
+    @apply flex-wrap;
+  }
+  
+  .fc .fc-toolbar-title {
+    @apply text-base;
+  }
+  
+  .fc .fc-button {
+    @apply text-xs px-1.5 py-0.5;
+  }
+  
+  .fc .fc-view-harness {
+    @apply max-h-[400px];
+  }
+
+  .fc .fc-scrollgrid {
+    @apply min-w-[320px];
+  }
+
+  .fc .fc-daygrid-body {
+    @apply min-w-[320px];
+  }
+
+  .fc .fc-timegrid-body {
+    @apply min-w-[320px];
+  }
+
+  .fc .fc-col-header {
+    @apply min-w-[320px];
+  }
+}
+
 :root {
   --background: #f0fdf4;
   --foreground: #166534;
