@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction'
 import { Event } from '@/types/event'
 
 interface EventCalendarProps {
@@ -33,12 +31,12 @@ export default function EventCalendar({ events }: EventCalendarProps) {
     <div className="bg-white p-2 md:p-4 rounded-lg shadow max-w-4xl mx-auto overflow-hidden">
       <div className="w-full overflow-x-auto">
         <FullCalendar
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          plugins={[dayGridPlugin]}
           initialView="dayGridMonth"
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay',
+            right: '',
           }}
           events={calendarEvents}
           eventClick={(info) => {
@@ -56,12 +54,6 @@ export default function EventCalendar({ events }: EventCalendarProps) {
             dayGridMonth: {
               titleFormat: { year: 'numeric', month: 'short' },
               dayMaxEventRows: 2,
-            },
-            timeGridWeek: {
-              titleFormat: { year: 'numeric', month: 'short', day: 'numeric' },
-            },
-            timeGridDay: {
-              titleFormat: { year: 'numeric', month: 'short', day: 'numeric' },
             },
           }}
         />

@@ -9,7 +9,7 @@
 }
 
 .fc .fc-toolbar {
-  @apply flex-col md:flex-row gap-2 md:gap-0 p-2;
+  @apply grid grid-cols-3 items-center p-2;
 }
 
 .fc .fc-toolbar-title {
@@ -17,15 +17,19 @@
 }
 
 .fc .fc-toolbar-chunk {
-  @apply flex items-center justify-center md:justify-start;
+  @apply flex items-center;
 }
 
 .fc .fc-toolbar-chunk:first-child {
-  @apply justify-center md:justify-start;
+  @apply justify-start;
+}
+
+.fc .fc-toolbar-chunk:nth-child(2) {
+  @apply justify-center;
 }
 
 .fc .fc-toolbar-chunk:last-child {
-  @apply justify-center md:justify-end;
+  @apply justify-end;
 }
 
 .fc .fc-button {
