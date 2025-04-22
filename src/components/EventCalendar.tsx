@@ -30,27 +30,42 @@ export default function EventCalendar({ events }: EventCalendarProps) {
   }, [events])
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow">
-      <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView="dayGridMonth"
-        headerToolbar={{
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay',
-        }}
-        events={calendarEvents}
-        eventClick={(info) => {
-          info.jsEvent.preventDefault()
-          window.location.href = info.event.url
-        }}
-        height="auto"
-        eventTimeFormat={{
-          hour: 'numeric',
-          minute: '2-digit',
-          meridiem: 'short',
-        }}
-      />
+    <div className="bg-white p-2 md:p-4 rounded-lg shadow max-w-4xl mx-auto overflow-hidden">
+      <div className="w-full overflow-x-auto">
+        <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView="dayGridMonth"
+          headerToolbar={{
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay',
+          }}
+          events={calendarEvents}
+          eventClick={(info) => {
+            info.jsEvent.preventDefault()
+            window.location.href = info.event.url
+          }}
+          height="auto"
+          aspectRatio={1.5}
+          eventTimeFormat={{
+            hour: 'numeric',
+            minute: '2-digit',
+            meridiem: 'short',
+          }}
+          views={{
+            dayGridMonth: {
+              titleFormat: { year: 'numeric', month: 'short' },
+              dayMaxEventRows: 2,
+            },
+            timeGridWeek: {
+              titleFormat: { year: 'numeric', month: 'short', day: 'numeric' },
+            },
+            timeGridDay: {
+              titleFormat: { year: 'numeric', month: 'short', day: 'numeric' },
+            },
+          }}
+        />
+      </div>
     </div>
   )
 } 
