@@ -2,10 +2,10 @@ export default function NewsletterSignup() {
   return (
     <div className="text-center">
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Stay Connected
+        Stay in touch
       </h2>
       <p className="mt-4 text-lg text-gray-600">
-        Subscribe to our newsletter to stay in touch! We send out occasional reflections, updates, and information about upcoming events.
+        Subscribe to our newsletter! We send out information about upcoming events, house updates, and occasional essays.
       </p>
 
       <div className="flex justify-center mt-8">

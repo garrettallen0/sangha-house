@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import NewsletterSignup from '@/components/NewsletterSignup'
+import { getHomepageImage } from '@/sanity/lib/queries'
 
-export default function Home() {
+export default async function Home() {
+  const homepageImage = await getHomepageImage()
+  console.log('Homepage image data:', homepageImage)
+
   return (
     <div className="space-y-8 sm:space-y-16">
       {/* Hero Section */}
@@ -62,12 +66,14 @@ export default function Home() {
       {/* Image Section */}
       <section className="py-6 sm:py-12">
         <div className="relative w-full h-[300px] sm:h-[400px]">
-          <Image
-            src="/images/IMG_7643.webp"
-            alt="Sangha House LA"
-            fill
-            className="object-contain rounded-lg"
-          />
+          {homepageImage?.imageUrl && (
+            <Image
+              src={homepageImage.imageUrl}
+              alt={homepageImage.alt || 'Sangha House LA'}
+              fill
+              className="object-contain rounded-lg"
+            />
+          )}
         </div>
       </section>
 
