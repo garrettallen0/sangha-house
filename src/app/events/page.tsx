@@ -2,6 +2,8 @@ import { client } from '@/lib/sanity'
 import { urlFor } from '@/lib/sanity'
 import Image from 'next/image'
 import Link from 'next/link'
+import EventCalendar from '@/components/EventCalendar'
+import { Event } from '@/types/event'
 
 async function getEvents() {
   const query = `*[_type == "event"] | order(date asc) {
@@ -49,8 +51,12 @@ export default async function Events() {
         </p>
       </div>
 
+      <div className="mb-8">
+        <EventCalendar events={events} />
+      </div>
+
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {events.map((event: any) => (
+        {events.map((event: Event) => (
           <div
             key={event._id}
             className="flex flex-col overflow-hidden rounded-lg shadow-lg"
