@@ -5,7 +5,6 @@ import { getHomepageImage } from '@/sanity/lib/queries'
 
 export default async function Home() {
   const homepageImage = await getHomepageImage()
-  console.log('Homepage image data:', homepageImage)
 
   return (
     <div className="space-y-8 sm:space-y-16">
