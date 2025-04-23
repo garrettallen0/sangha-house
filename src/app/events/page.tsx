@@ -17,15 +17,12 @@ async function getEvents() {
     image,
     registrationLink
   }`
-  console.log('Fetching events with query:', query)
   const events = await client.fetch(query)
-  console.log('Fetched events:', events)
   return events
 }
 
 export default async function Events() {
   const events = await getEvents()
-  console.log('Events in component:', events)
 
   if (!events || events.length === 0) {
     return (
