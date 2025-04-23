@@ -74,11 +74,12 @@ export default async function Events() {
             <div className="flex flex-1 flex-col justify-between bg-white p-6">
               <div className="flex-1">
                 <p className="text-sm font-medium text-indigo-600">
-                  {new Date(event.date).toLocaleDateString('en-US', {
+                  {new Date(event.date).toLocaleString('en-US', {
                     weekday: 'long',
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
+                    timeZone: 'America/Los_Angeles'
                   })}
                 </p>
                 <Link
