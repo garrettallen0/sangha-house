@@ -26,8 +26,6 @@ export default function EventCalendar({ events }: EventCalendarProps) {
   const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([])
 
   useEffect(() => {
-    console.log('Raw events from Sanity:', JSON.stringify(events, null, 2))
-    
     const formattedEvents = events.flatMap((event) => {
       if (!event.isRecurring) {
         return [{
@@ -55,18 +53,6 @@ export default function EventCalendar({ events }: EventCalendarProps) {
       
       // If the start date is in the future, use it. Otherwise, start from today
       const currentDate = startDate > now ? new Date(startDate) : new Date(now)
-      
-      console.log('Processing recurring event:', {
-        title: event.title,
-        isRecurring: event.isRecurring,
-        recurrencePattern: event.recurrencePattern,
-        dayOfWeek: event.dayOfWeek,
-        dayOfMonth: event.dayOfMonth,
-        startTime: event.startTime,
-        startDate: startDate.toISOString(),
-        endDate: endDate.toISOString(),
-        currentDate: currentDate.toISOString()
-      })
       
       while (currentDate <= endDate) {
         let shouldAddEvent = false
@@ -109,11 +95,9 @@ export default function EventCalendar({ events }: EventCalendarProps) {
         currentDate.setDate(currentDate.getDate() + 1)
       }
       
-      console.log(`Generated ${recurringEvents.length} recurring events for ${event.title}`)
       return recurringEvents
     })
     
-    console.log('Final calendar events:', JSON.stringify(formattedEvents, null, 2))
     setCalendarEvents(formattedEvents)
   }, [events])
 
