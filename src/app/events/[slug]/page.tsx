@@ -9,7 +9,13 @@ async function getEvent(slug: string) {
     _id,
     title,
     slug,
+    isRecurring,
     date,
+    startTime,
+    recurrencePattern,
+    dayOfWeek,
+    dayOfMonth,
+    recurrenceEndDate,
     endDate,
     location,
     description,
@@ -31,6 +37,48 @@ export default async function EventPage({
     notFound()
   }
 
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'America/Los_Angeles'
+    })
+  }
+
+  const formatTime = (time: string) => {
+    const [hours, minutes] = time.split(':')
+    const date = new Date()
+    date.setHours(parseInt(hours), parseInt(minutes))
+    return date.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZone: 'America/Los_Angeles'
+    })
+  }
+
+  const getRecurrenceText = (event: Event) => {
+    if (!event.isRecurring) return null
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const timeText = event.startTime ? ` at ${formatTime(event.startTime)}` : ''
+    const endDateText = event.recurrenceEndDate ? ` until ${formatDate(event.recurrenceEndDate)}` : ''
+
+    if (event.recurrencePattern === 'weekly') {
+      return `Every ${days[parseInt(event.dayOfWeek || '0')]}${timeText}${endDateText}`
+    } else if (event.recurrencePattern === 'monthly') {
+      return `Monthly on the ${event.dayOfMonth}${getOrdinalSuffix(event.dayOfMonth || 1)}${timeText}${endDateText}`
+    }
+    return null
+  }
+
+  const getOrdinalSuffix = (n: number) => {
+    const s = ['th', 'st', 'nd', 'rd']
+    const v = n % 100
+    return s[(v - 20) % 10] || s[v] || s[0]
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <article className="prose lg:prose-xl">
@@ -39,15 +87,14 @@ export default async function EventPage({
         </h1>
         
         <div className="mt-4 text-lg text-gray-600">
-          <p>
-            {new Date(event.date).toLocaleString('en-US', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              timeZone: 'America/Los_Angeles'
-            })}
-          </p>
+          {event.isRecurring ? (
+            <p>{getRecurrenceText(event)}</p>
+          ) : (
+            <p>
+              {formatDate(event.date || '')}
+              {event.startTime && ` at ${formatTime(event.startTime)}`}
+            </p>
+          )}
           <p className="mt-2">{event.location}</p>
         </div>
 

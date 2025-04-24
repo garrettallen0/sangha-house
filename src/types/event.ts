@@ -4,7 +4,13 @@ export interface Event {
   slug: {
     current: string
   }
-  date: string
+  isRecurring: boolean
+  date?: string
+  startTime?: string
+  recurrencePattern?: 'weekly' | 'monthly'
+  dayOfWeek?: string
+  dayOfMonth?: number
+  recurrenceEndDate?: string
   endDate?: string
   location: string
   description: string

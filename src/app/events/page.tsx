@@ -10,7 +10,13 @@ async function getEvents() {
     _id,
     title,
     slug,
+    isRecurring,
     date,
+    startTime,
+    recurrencePattern,
+    dayOfWeek,
+    dayOfMonth,
+    recurrenceEndDate,
     endDate,
     location,
     description,
@@ -71,13 +77,17 @@ export default async function Events() {
             <div className="flex flex-1 flex-col justify-between bg-white p-6">
               <div className="flex-1">
                 <p className="text-sm font-medium text-indigo-600">
-                  {new Date(event.date).toLocaleString('en-US', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    timeZone: 'America/Los_Angeles'
-                  })}
+                  {event.isRecurring
+                    ? event.recurrencePattern === 'weekly'
+                      ? `Every ${['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][parseInt(event.dayOfWeek || '0')]}`
+                      : `Monthly on day ${event.dayOfMonth}`
+                    : new Date(event.date || '').toLocaleString('en-US', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        timeZone: 'America/Los_Angeles'
+                      })}
                 </p>
                 <Link
                   href={`/events/${event.slug.current}`}
