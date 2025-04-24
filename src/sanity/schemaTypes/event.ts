@@ -91,7 +91,7 @@ export default defineType({
       name: 'endDate',
       title: 'End Date and Time',
       type: 'datetime',
-      hidden: ({ document }) => document?.isRecurring,
+      hidden: ({ document }) => Boolean(document?.isRecurring),
     }),
     defineField({
       name: 'location',
