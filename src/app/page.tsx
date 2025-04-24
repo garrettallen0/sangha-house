@@ -77,6 +77,7 @@ export default async function Home() {
               src={homepageImage.imageUrl}
               alt={homepageImage.alt || 'Sangha House LA'}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain rounded-lg"
             />
           )}
