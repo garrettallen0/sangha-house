@@ -9,21 +9,95 @@ interface EventCalendarProps {
   events: Event[]
 }
 
+interface CalendarEvent {
+  id: string
+  title: string
+  start: string
+  end: string
+  url: string
+  extendedProps: {
+    description: string
+    location: string
+    isRecurring?: boolean
+  }
+}
+
 export default function EventCalendar({ events }: EventCalendarProps) {
-  const [calendarEvents, setCalendarEvents] = useState<any[]>([])
+  const [calendarEvents, setCalendarEvents] = useState<CalendarEvent[]>([])
 
   useEffect(() => {
-    const formattedEvents = events.map((event) => ({
-      id: event._id,
-      title: event.title,
-      start: event.date,
-      end: event.endDate || event.date,
-      url: `/events/${event.slug.current}`,
-      extendedProps: {
-        description: event.description,
-        location: event.location,
-      },
-    }))
+    const formattedEvents = events.flatMap((event) => {
+      if (!event.isRecurring) {
+        return [{
+          id: event._id,
+          title: event.title,
+          start: event.date || '',
+          end: event.endDate || event.date || '',
+          url: `/events/${event.slug.current}`,
+          extendedProps: {
+            description: event.description,
+            location: event.location,
+          },
+        }]
+      }
+
+      // Generate recurring events
+      const recurringEvents: CalendarEvent[] = []
+      
+      // For recurring events, we'll generate instances for the next year
+      const now = new Date()
+      const startDate = event.date ? new Date(event.date) : now
+      const endDate = event.recurrenceEndDate 
+        ? new Date(event.recurrenceEndDate) 
+        : new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
+      
+      // If the start date is in the future, use it. Otherwise, start from today
+      const currentDate = startDate > now ? new Date(startDate) : new Date(now)
+      
+      while (currentDate <= endDate) {
+        let shouldAddEvent = false
+        
+        if (event.recurrencePattern === 'weekly') {
+          const dayOfWeek = parseInt(event.dayOfWeek || '0')
+          shouldAddEvent = currentDate.getDay() === dayOfWeek
+        } else if (event.recurrencePattern === 'monthly') {
+          const dayOfMonth = event.dayOfMonth || 1
+          shouldAddEvent = currentDate.getDate() === dayOfMonth
+        }
+        
+        if (shouldAddEvent) {
+          const eventDate = new Date(currentDate)
+          if (event.startTime) {
+            const [hours, minutes] = event.startTime.split(':').map(Number)
+            eventDate.setHours(hours, minutes)
+          } else if (event.date) {
+            const initialDate = new Date(event.date)
+            eventDate.setHours(initialDate.getHours(), initialDate.getMinutes())
+          }
+          
+          const eventEndDate = new Date(eventDate)
+          eventEndDate.setHours(eventEndDate.getHours() + 1) // Default 1-hour duration
+          
+          recurringEvents.push({
+            id: `${event._id}-${eventDate.toISOString()}`,
+            title: event.title,
+            start: eventDate.toISOString(),
+            end: eventEndDate.toISOString(),
+            url: `/events/${event.slug.current}`,
+            extendedProps: {
+              description: event.description,
+              location: event.location,
+              isRecurring: true,
+            },
+          })
+        }
+        
+        currentDate.setDate(currentDate.getDate() + 1)
+      }
+      
+      return recurringEvents
+    })
+    
     setCalendarEvents(formattedEvents)
   }, [events])
 
