@@ -45,30 +45,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-6 sm:py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900">Community</h3>
-            <p className="mt-2 text-gray-600">
-              Join a supportive community of like-minded individuals on the path of mindful living.
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900">Events</h3>
-            <p className="mt-2 text-gray-600">
-              Participate in workshops, meditation sessions, and community gatherings.
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900">Growth</h3>
-            <p className="mt-2 text-gray-600">
-              Explore personal development and spiritual growth in a nurturing environment.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Image Section */}
       <section className="py-6 sm:py-12">
         <div className="relative w-full h-[300px] sm:h-[400px]">
