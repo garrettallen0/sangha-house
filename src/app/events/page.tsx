@@ -108,7 +108,7 @@ export default async function Events() {
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-gray-500 hover:text-indigo-600"
+                      className="text-sm text-gray-500 hover:text-indigo-600 underline"
                     >
                       {event.location}
                     </a>
