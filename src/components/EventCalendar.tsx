@@ -69,7 +69,23 @@ export default function EventCalendar({ events }: EventCalendarProps) {
           const eventDate = new Date(currentDate)
           if (event.startTime) {
             const [hours, minutes] = event.startTime.split(':').map(Number)
-            eventDate.setHours(hours, minutes)
+            // Create a date string in ISO format with the correct timezone
+            const dateStr = eventDate.toLocaleString('en-US', {
+              timeZone: 'America/Los_Angeles',
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+            })
+            const [datePart, timePart] = dateStr.split(', ')
+            const [month, day, year] = datePart.split('/')
+            const [hour, minute] = timePart.split(':')
+            eventDate.setFullYear(parseInt(year))
+            eventDate.setMonth(parseInt(month) - 1)
+            eventDate.setDate(parseInt(day))
+            eventDate.setHours(parseInt(hour), parseInt(minute))
           } else if (event.date) {
             const initialDate = new Date(event.date)
             eventDate.setHours(initialDate.getHours(), initialDate.getMinutes())
