@@ -49,7 +49,7 @@ export default async function EventPage({
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':')
-    const date = new Date()
+    const date = new Date('2024-01-01T00:00:00Z')
     date.setHours(parseInt(hours), parseInt(minutes))
     return date.toLocaleTimeString('en-US', {
       hour: 'numeric',
