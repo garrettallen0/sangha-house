@@ -95,7 +95,16 @@ export default async function EventPage({
               {event.startTime && ` at ${formatTime(event.startTime)}`}
             </p>
           )}
-          <p className="mt-2">{event.location}</p>
+          <p className="mt-2">
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-indigo-600 underline"
+            >
+              {event.location}
+            </a>
+          </p>
         </div>
 
         {event.image && (

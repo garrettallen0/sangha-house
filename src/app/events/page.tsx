@@ -104,9 +104,14 @@ export default async function Events() {
               <div className="mt-6">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <span className="text-sm text-gray-500">
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-500 hover:text-indigo-600 underline"
+                    >
                       {event.location}
-                    </span>
+                    </a>
                   </div>
                 </div>
                 {event.registrationLink && (
