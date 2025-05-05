@@ -35,34 +35,34 @@ export default function Navigation() {
               >
                 Contact
               </Link>
+              <Link
+                href="/start-sangha"
+                className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                Start a Sangha House{' '}
+                <svg
+                  className="ml-1 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
           <div className="hidden sm:flex sm:items-center">
-            <Link
-              href="/start-sangha"
-              className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-            >
-              Start a Sangha House{' '}
-              <svg
-                className="ml-1 h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
             <a
               href="https://www.instagram.com/sanghahousela/"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -145,7 +145,6 @@ export default function Navigation() {
           >
             Contact
           </Link>
-          <div className="border-t border-gray-200 my-2"></div>
           <Link
             href="/start-sangha"
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
@@ -166,6 +165,7 @@ export default function Navigation() {
               />
             </svg>
           </Link>
+          <div className="border-t border-gray-200 my-2"></div>
           <a
             href="https://www.instagram.com/sanghahousela/"
             target="_blank"
