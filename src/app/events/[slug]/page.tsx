@@ -49,13 +49,11 @@ export default async function EventPage({
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':')
-    const date = new Date('2024-01-01T00:00:00Z')
-    date.setHours(parseInt(hours), parseInt(minutes))
-    return date.toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      timeZone: 'America/Los_Angeles'
-    })
+    const hour = parseInt(hours)
+    const minute = parseInt(minutes)
+    const period = hour >= 12 ? 'PM' : 'AM'
+    const displayHour = hour % 12 || 12
+    return `${displayHour}:${minute.toString().padStart(2, '0')} ${period}`
   }
 
   const getRecurrenceText = (event: Event) => {
