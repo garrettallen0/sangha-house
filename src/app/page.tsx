@@ -47,7 +47,7 @@ export default async function Home() {
       </section>
 
       {/* Featured and Image Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8">
         <Featured />
         <section className="py-6 sm:py-12">
           <div className="relative w-full h-[300px] sm:h-[400px]">
