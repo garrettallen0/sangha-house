@@ -8,7 +8,7 @@ export default async function Home() {
   const homepageImage = await getHomepageImage()
 
   return (
-    <div className="space-y-8 sm:space-y-16">
+    <div>
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -33,7 +33,7 @@ export default async function Home() {
       </section>
 
       {/* Featured and Image Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8 mt-4">
         <Featured />
         <section className="py-6 sm:py-12">
           <div className="relative w-full h-[300px] sm:h-[400px]">
@@ -51,7 +51,7 @@ export default async function Home() {
       </div>
 
       {/* Newsletter Section */}
-      <section className="py-6 sm:py-12">
+      <section className="py-6 sm:py-12 mt-4 sm:mt-16">
         <NewsletterSignup />
       </section>
     </div>
