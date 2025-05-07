@@ -30,20 +30,6 @@ export default async function Home() {
           >
             Los Angeles Compassionate Heart Sangha</a>, which meets at the Angel City Zen Center. We came together to support each other in our practice.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Link
-            href="/about"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Learn More
-          </Link>
-          <Link
-            href="/events"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            View Events <span aria-hidden="true">→</span>
-          </Link>
-        </div>
       </section>
 
       {/* Featured and Image Section */}
