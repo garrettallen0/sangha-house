@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import NewsletterSignup from '@/components/NewsletterSignup'
+import Featured from '@/components/Featured'
 import { getHomepageImage } from '@/sanity/lib/queries'
 
 export default async function Home() {
@@ -45,20 +46,23 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Image Section */}
-      <section className="py-6 sm:py-12">
-        <div className="relative w-full h-[300px] sm:h-[400px]">
-          {homepageImage?.imageUrl && (
-            <Image
-              src={homepageImage.imageUrl}
-              alt={homepageImage.alt || 'Sangha House LA'}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-contain rounded-lg"
-            />
-          )}
-        </div>
-      </section>
+      {/* Featured and Image Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Featured />
+        <section className="py-6 sm:py-12">
+          <div className="relative w-full h-[300px] sm:h-[400px]">
+            {homepageImage?.imageUrl && (
+              <Image
+                src={homepageImage.imageUrl}
+                alt={homepageImage.alt || 'Sangha House LA'}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain rounded-lg"
+              />
+            )}
+          </div>
+        </section>
+      </div>
 
       {/* Newsletter Section */}
       <section className="py-6 sm:py-12">
