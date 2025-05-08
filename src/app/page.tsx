@@ -14,7 +14,7 @@ export default async function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Sangha House LA
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-6 text-lg leading-8 text-gray-600 max-w-sm mx-auto">
           We are an intentional community in the <a 
             href="https://plumvillage.org/#filter=.region-na"
             target="_blank" 
