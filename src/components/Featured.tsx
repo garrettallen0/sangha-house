@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 interface FeaturedCard {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   link?: string;
 }
 
@@ -17,12 +17,26 @@ const featuredItems: FeaturedCard[] = [
   },
   {
     title: 'Dharma',
-    description: 'We are on the Dharma path. Several of us are in the process of ordination in the Order of Interbeing. ',
+    description: 'We are on the Dharma path. The 14 Mindfulness Trainings are the foundation of our practice. Several of us are in the process of ordination in the Order of Interbeing. ',
     link: '/about'
   },
   {
     title: 'Sangha',
-    description: 'Sangha is the Sanskrit word for "community".'
+    description: (
+      <>
+        Sangha is the Sanskrit word for "community". We are members of the{' '}
+        <a
+          href="https://lachsangha.wixsite.com/breathe"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-indigo-600"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Compassionate Heart Sangha
+        </a>
+        , which meets at the Angel City Zen Center.
+      </>
+    )
   }
 ];
 
@@ -53,9 +67,9 @@ export default function Featured() {
           <h3 className="text-xl font-semibold text-gray-900 mb-3">
             {featuredItems[currentIndex].title}
           </h3>
-          <p className="text-gray-600">
+          <div className="text-gray-600">
             {featuredItems[currentIndex].description}
-          </p>
+          </div>
         </Link>
 
         {/* Navigation Controls */}
