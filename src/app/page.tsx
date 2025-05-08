@@ -22,13 +22,7 @@ export default async function Home() {
             className="underline hover:text-indigo-600"
           >
             Plum Village
-          </a> tradition of Thich Nhat Hanh. We are an offshoot of the <a 
-            href="https://lachsangha.wixsite.com/breathe" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="underline hover:text-indigo-600"
-          >
-            Los Angeles Compassionate Heart Sangha</a>, which meets at the Angel City Zen Center. We came together to support each other in our practice.
+          </a> tradition of Thich Nhat Hanh.
         </p>
       </section>
 
