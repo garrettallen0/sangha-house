@@ -14,15 +14,17 @@ export default async function Home() {
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
           Sangha House LA
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600 max-w-sm mx-auto">
-          We are an intentional community in the <a 
+        <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xs mx-auto">
+          <span className="block">We are an intentional community</span>
+          <span className="block">in the <a 
             href="https://plumvillage.org/#filter=.region-na"
             target="_blank" 
             rel="noopener noreferrer"
             className="underline hover:text-indigo-600"
           >
             Plum Village
-          </a> tradition of Thich Nhat Hanh.
+          </a> tradition</span>
+          <span className="block">of Thich Nhat Hanh.</span>
         </p>
       </section>
 
