@@ -38,30 +38,30 @@ export default function NewsletterSidebar() {
 
   return (
     <div className="w-full max-w-sm p-4 bg-white rounded-lg shadow">
-      <h2 className="text-xl font-semibold mb-4">From our Newsletter</h2>
+      <h2 className="text-xl font-semibold mb-4 text-black text-center">From our Newsletter</h2>
       <div className="space-y-4">
         {SAMPLE_POSTS.slice(0, 4).map((post, index) => (
-          <div key={index} className="substack-post-embed">
-            <p className="font-medium">{post.title}</p>
+          <a 
+            key={index}
+            href={post.link}
+            className="block substack-post-embed hover:bg-gray-50 p-2 rounded transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p className="font-medium text-black">{post.title}</p>
             <p className="text-gray-600 text-sm">{post.description}</p>
-            <a 
-              href={post.link}
-              className="text-blue-600 hover:text-blue-800 text-sm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read on Substack
-            </a>
-          </div>
+          </a>
         ))}
       </div>
-      <div className="mt-4">
-        <Link 
-          href="/newsletter"
-          className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+      <div className="mt-4 flex justify-center">
+        <a 
+          href="https://sanghahousela.substack.com/"
+          className="inline-block px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          View All Posts
-        </Link>
+          View All
+        </a>
       </div>
     </div>
   );
