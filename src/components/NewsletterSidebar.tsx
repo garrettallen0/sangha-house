@@ -11,12 +11,12 @@ interface NewsletterPost {
 
 const SAMPLE_POSTS: NewsletterPost[] = [
   {
-    title: 'Kissing ground by Sangha House LA',
+    title: 'Kissing ground',
     teaser: "Only as I got closer did I see there were other words that weren't immediately visible. On closer inspection, the sign actually read \"Walk like your feet are kissing the ground — Thich Nhat Hanh.\"",
     link: 'https://sanghahousela.substack.com/p/kissing-ground'
   },
   {
-    title: 'Transition by Sangha House LA',
+    title: 'Transition',
     teaser: "We were sitting around the low table in the living room, boxes piled up around us, having one of our first informal meetings as a living and breathing Sangha house, when my eyes must have internally dilated and the nature of this transition began to dawn on me.",
     link: 'https://sanghahousela.substack.com/p/transition'
   }
