@@ -22,7 +22,7 @@ export default function RootLayout({
         <Navigation />
         <div className="flex flex-col lg:flex-row">
           <div className="flex-1 flex justify-center">
-            <main className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+            <main className="w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-8">
               {children}
             </main>
           </div>
