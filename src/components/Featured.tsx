@@ -12,7 +12,7 @@ interface FeaturedCard {
 const featuredItems: FeaturedCard[] = [
   {
     title: 'Weekly Meditation',
-    description: 'We host a weekly meditation on Wednesdays at 7 pm at our house in Echo Park. Open to all.',
+    description: 'We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.',
     link: '/events'
   },
   {
@@ -34,7 +34,7 @@ const featuredItems: FeaturedCard[] = [
         >
           Compassionate Heart Sangha
         </a>
-        , which meets at the Angel City Zen Center.
+        , which meets at the Angel City Zen Center on Sundays at 11 AM.
       </>
     )
   }
