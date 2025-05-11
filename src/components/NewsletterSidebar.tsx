@@ -12,12 +12,12 @@ interface NewsletterPost {
 const SAMPLE_POSTS: NewsletterPost[] = [
   {
     title: 'Kissing ground',
-    teaser: "Only as I got closer did I see there were other words that weren't immediately visible. On closer inspection, the sign actually read \"Walk like your feet are kissing the ground — Thich Nhat Hanh.\"",
+    teaser: "Only as I got closer did I see there were other words that weren't immediately visible. On closer inspection, the sign actually read \"Walk like your feet are kissing the ground — Thich Nhat Hanh...",
     link: 'https://sanghahousela.substack.com/p/kissing-ground'
   },
   {
     title: 'Transition',
-    teaser: "We were sitting around the low table in the living room, boxes piled up around us, having one of our first informal meetings as a living and breathing Sangha house, when my eyes must have internally dilated and the nature of this transition began to dawn on me.",
+    teaser: "We were sitting around the low table in the living room, boxes piled up around us, having one of our first informal meetings as a living and breathing Sangha house, when my eyes must have internally dilated and the nature of this transition began to dawn on me....",
     link: 'https://sanghahousela.substack.com/p/transition'
   }
 ];
@@ -48,8 +48,8 @@ export default function NewsletterSidebar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="font-medium text-black">{post.title}</p>
-            <p className="text-gray-600 text-sm">{post.teaser}</p>
+            <p className="font-medium text-black mb-1">{post.title}</p>
+            <p className="text-gray-600 text-sm p-1">{post.teaser}</p>
           </a>
         ))}
       </div>
