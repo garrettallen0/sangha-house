@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
-import Layout from '@/components/Layout';
+import NewsletterSidebar from '@/components/NewsletterSidebar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +20,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-green-50`}>
         <Navigation />
-        <Layout>
-          {children}
-        </Layout>
+        <div className="flex">
+          <div className="flex-1 flex justify-center">
+            <main className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+              {children}
+            </main>
+          </div>
+          <aside className="hidden lg:block w-[350px] shrink-0">
+            <NewsletterSidebar />
+          </aside>
+        </div>
         <footer className="bg-green-100 border-t border-green-200">
           <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-green-600 text-sm">
