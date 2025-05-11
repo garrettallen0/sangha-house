@@ -20,13 +20,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-green-50`}>
         <Navigation />
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <div className="flex-1 flex justify-center">
             <main className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
               {children}
             </main>
           </div>
-          <aside className="hidden lg:block w-[350px] shrink-0">
+          <aside className="w-full lg:w-[350px] lg:shrink-0">
             <NewsletterSidebar />
           </aside>
         </div>
