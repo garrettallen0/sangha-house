@@ -44,7 +44,7 @@ export default function NewsletterSidebar() {
           <a 
             key={index}
             href={post.link}
-            className="block substack-post-embed hover:bg-gray-50 p-2 rounded transition-colors"
+            className="block substack-post-embed shadow-md hover:shadow-lg hover:outline hover:outline-2 hover:outline-purple-600 transition-all p-2 rounded"
             target="_blank"
             rel="noopener noreferrer"
           >
