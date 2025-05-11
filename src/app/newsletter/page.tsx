@@ -14,7 +14,11 @@ const SAMPLE_POSTS: NewsletterPost[] = [
     description: 'Enjoying the silences',
     link: 'https://sanghahousela.substack.com/p/kissing-ground'
   },
-  // Add more sample posts here
+  {
+    title: 'Transition by Sangha House LA',
+    description: 'Beginning a Sangha House',
+    link: 'https://sanghahousela.substack.com/p/transition'
+  }
 ];
 
 export default function NewsletterArchive() {
