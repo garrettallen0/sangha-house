@@ -5,19 +5,19 @@ import { useEffect } from 'react';
 
 interface NewsletterPost {
   title: string;
-  description: string;
+  teaser: string;
   link: string;
 }
 
 const SAMPLE_POSTS: NewsletterPost[] = [
   {
     title: 'Kissing ground by Sangha House LA',
-    description: 'Enjoying the silences',
+    teaser: "Only as I got closer did I see there were other words that weren't immediately visible. On closer inspection, the sign actually read \"Walk like your feet are kissing the ground — Thich Nhat Hanh.\"",
     link: 'https://sanghahousela.substack.com/p/kissing-ground'
   },
   {
     title: 'Transition by Sangha House LA',
-    description: 'Beginning a Sangha House',
+    teaser: "We were sitting around the low table in the living room, boxes piled up around us, having one of our first informal meetings as a living and breathing Sangha house, when my eyes must have internally dilated and the nature of this transition began to dawn on me.",
     link: 'https://sanghahousela.substack.com/p/transition'
   }
 ];
@@ -49,7 +49,7 @@ export default function NewsletterSidebar() {
             rel="noopener noreferrer"
           >
             <p className="font-medium text-black">{post.title}</p>
-            <p className="text-gray-600 text-sm">{post.description}</p>
+            <p className="text-gray-600 text-sm">{post.teaser}</p>
           </a>
         ))}
       </div>

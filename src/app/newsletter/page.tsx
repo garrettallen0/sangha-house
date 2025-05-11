@@ -10,12 +10,12 @@ interface NewsletterPost {
 
 const SAMPLE_POSTS: NewsletterPost[] = [
   {
-    title: 'Kissing ground by Sangha House LA',
+    title: 'Kissing ground',
     description: 'Enjoying the silences',
     link: 'https://sanghahousela.substack.com/p/kissing-ground'
   },
   {
-    title: 'Transition by Sangha House LA',
+    title: 'Transition',
     description: 'Beginning a Sangha House',
     link: 'https://sanghahousela.substack.com/p/transition'
   }
