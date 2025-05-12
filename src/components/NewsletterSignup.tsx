@@ -14,13 +14,12 @@ export default function NewsletterSignup() {
           width="100%" 
           height="320" 
           style={{ 
-            border: "1px solid #EEE", 
             background: "white",
             maxWidth: "800px",
-            width: "100%"
+            width: "100%",
+            border: "none",
+            overflow: "hidden"
           }} 
-          frameBorder="0" 
-          scrolling="no"
         ></iframe>
       </div>
     </div>
