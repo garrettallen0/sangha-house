@@ -7,7 +7,7 @@ export default function About() {
         </h1>
       </div>
 
-      <div className="prose prose-lg mx-auto">
+      <div className="text-center prose prose-lg mx-auto">
         <p>
           Coming soon!
         </p>
