@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
 import NewsletterSidebar from '@/components/NewsletterSidebar';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,13 +31,7 @@ export default function RootLayout({
             <NewsletterSidebar />
           </aside>
         </div>
-        <footer className="bg-green-100 border-t border-green-200">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-green-600 text-sm">
-              © {new Date().getFullYear()} Sangha House. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

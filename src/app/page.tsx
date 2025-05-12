@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import NewsletterSignup from '@/components/NewsletterSignup'
 import Featured from '@/components/Featured'
 import { getHomepageImage } from '@/sanity/lib/queries'
 
@@ -47,11 +46,6 @@ export default async function Home() {
             </div>
           </section>
         </div>
-
-        {/* Newsletter Section */}
-        <section className="py-6 sm:py-12 mt-4 sm:mt-16">
-          <NewsletterSignup />
-        </section>
       </div>
     </>
   )
