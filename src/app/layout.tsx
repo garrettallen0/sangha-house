@@ -26,7 +26,7 @@ export default function RootLayout({
               {children}
             </main>
           </div>
-          <aside className="w-full lg:w-[350px] lg:shrink-0 lg:py-8">
+          <aside className="w-full lg:w-[350px] px-4 lg:px-0 lg:shrink-0 lg:py-8">
             <NewsletterSidebar />
           </aside>
         </div>
