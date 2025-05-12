@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
 import NewsletterSidebar from '@/components/NewsletterSidebar';
+import FooterWrapper from '@/components/FooterWrapper';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,17 +27,11 @@ export default function RootLayout({
               {children}
             </main>
           </div>
-          <aside className="w-full lg:w-[350px] lg:shrink-0 lg:py-8">
+          <aside className="w-full lg:w-[350px] px-4 lg:px-0 lg:shrink-0 lg:py-8">
             <NewsletterSidebar />
           </aside>
         </div>
-        <footer className="bg-green-100 border-t border-green-200">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-green-600 text-sm">
-              © {new Date().getFullYear()} Sangha House. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        <FooterWrapper />
       </body>
     </html>
   );

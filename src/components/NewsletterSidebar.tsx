@@ -37,7 +37,7 @@ export default function NewsletterSidebar() {
   }, []);
 
   return (
-    <div className="w-full max-w-sm p-4 bg-white rounded-lg shadow">
+    <div className="w-full p-4 bg-white rounded-lg shadow">
       <h2 className="text-xl font-semibold mb-4 text-black text-center">From our Newsletter</h2>
       <div className="space-y-4">
         {SAMPLE_POSTS.slice(0, 4).map((post, index) => (
