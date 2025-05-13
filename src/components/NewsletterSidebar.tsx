@@ -47,7 +47,7 @@ export default function NewsletterSidebar() {
     <div 
       className={`
         w-full bg-white rounded-lg shadow transition-all duration-300 ease-in-out
-        ${isExpanded ? 'p-4' : 'p-2 cursor-pointer'}
+        ${isExpanded ? 'p-4' : 'p-2 cursor-pointer animate-subtle-bounce'}
         ${isHovered && !isExpanded ? 'scale-105 shadow-lg' : ''}
         hover:shadow-lg
       `}
@@ -89,7 +89,7 @@ export default function NewsletterSidebar() {
         <div className="flex items-center justify-center h-12">
           <h2 className="text-lg font-semibold text-black">From Our Newsletter</h2>
           <svg 
-            className={`w-5 h-5 ml-2 text-indigo-600 transition-transform duration-300 ${isHovered ? 'animate-bounce' : ''}`}
+            className="w-5 h-5 ml-2 text-indigo-600"
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
