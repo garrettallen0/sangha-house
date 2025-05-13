@@ -6,7 +6,7 @@ export default function StartSangha() {
           Start a Sangha House
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          We are intent on creating documentation for others to create Sangha Houses in the in the Plum Village tradition. Stay tuned for more!
+          We are intent on creating documentation for others to create Sangha Houses in the Plum Village tradition. Stay tuned for more!
         </p>
       </div>
       
