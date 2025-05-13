@@ -57,7 +57,17 @@ export default function NewsletterSidebar() {
     >
       {isExpanded ? (
         <>
-          <h2 className="text-xl font-semibold mb-4 text-black text-center">From Our Newsletter</h2>
+          <h2 className="text-xl font-semibold mb-4 text-black text-center flex items-center justify-center">
+            From our Newsletter
+            <svg 
+              className="w-5 h-5 ml-2 text-indigo-600"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+            </svg>
+          </h2>
           <div className="space-y-4">
             {SAMPLE_POSTS.slice(0, 4).map((post, index) => (
               <a 
