@@ -57,7 +57,7 @@ export default function NewsletterSidebar() {
     >
       {isExpanded ? (
         <>
-          <h2 className="text-xl font-semibold mb-4 text-black text-center">From our Newsletter</h2>
+          <h2 className="text-xl font-semibold mb-4 text-black text-center">From Our Newsletter</h2>
           <div className="space-y-4">
             {SAMPLE_POSTS.slice(0, 4).map((post, index) => (
               <a 
