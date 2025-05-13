@@ -16,11 +16,11 @@ const config: Config = {
       keyframes: {
         'subtle-bounce': {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-5px)' },
+          '50%': { transform: 'translateY(-10px)' },
         }
       },
       animation: {
-        'subtle-bounce': 'subtle-bounce 2s ease-in-out infinite',
+        'subtle-bounce': 'subtle-bounce 1.5s ease-in-out infinite',
       }
     },
   },
