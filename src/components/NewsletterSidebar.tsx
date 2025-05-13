@@ -58,7 +58,7 @@ export default function NewsletterSidebar() {
       {isExpanded ? (
         <>
           <h2 className="text-xl font-semibold mb-4 text-black text-center flex items-center justify-center">
-            From our Newsletter
+            From Our Newsletter
             <svg 
               className="w-5 h-5 ml-2 text-indigo-600"
               fill="none" 
