@@ -19,6 +19,11 @@ const SAMPLE_POSTS: NewsletterPost[] = [
     title: 'Transition',
     teaser: "We were sitting around the low table in the living room, boxes piled up around us, having one of our first informal meetings as a living and breathing Sangha house, when my eyes must have internally dilated and the nature of this transition began to dawn on me...",
     link: 'https://sanghahousela.substack.com/p/transition'
+  }, 
+  {
+    title: 'I have arrived, I am home',
+    teaser: "A big dream of mine came true last month. I visited several intentional communities over the years and wished to live in one myself, and now not only do I live in one, but I helped start it. (*throws confetti*)",
+    link: 'https://sanghahousela.substack.com/p/i-have-arrived-i-am-home'
   }
 ];
 
