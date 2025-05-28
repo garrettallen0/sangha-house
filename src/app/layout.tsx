@@ -27,7 +27,7 @@ export default function RootLayout({
               {children}
             </main>
           </div>
-          <aside className="w-full lg:w-[350px] px-4 lg:px-0 lg:shrink-0 lg:pt-80 flex flex-col">
+          <aside className="w-full lg:w-[350px] px-4 lg:px-0 lg:shrink-0 lg:pt-20 flex flex-col">
             <NewsletterSidebar />
           </aside>
         </div>
