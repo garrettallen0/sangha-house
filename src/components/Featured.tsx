@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FeaturedCard {
   title: string;
@@ -10,6 +11,24 @@ interface FeaturedCard {
 }
 
 const featuredItems: FeaturedCard[] = [
+  {
+    title: 'Room Opening!',
+    description: (
+      <div className="flex flex-col items-center space-y-3">
+        <p className="text-center text-gray-600 mb-3">
+          We are looking for a housemate and community member.
+        </p>
+        <Image
+          src="/room-opening.webp"
+          alt="Room Opening"
+          width={200}
+          height={150}
+          className="rounded-lg shadow-md"
+        />
+      </div>
+    ),
+    link: '/room-opening'
+  },
   {
     title: 'Weekly Meditation',
     description: 'We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.',
@@ -64,7 +83,7 @@ export default function Featured() {
             featuredItems[currentIndex].link ? 'cursor-pointer' : 'cursor-default'
           }`}
         >
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
             {featuredItems[currentIndex].title}
           </h3>
           <div className="text-gray-600">
