@@ -36,6 +36,12 @@ export default function Navigation() {
                 Contact
               </Link>
               <Link
+                href="/room-opening"
+                className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                Room Opening
+              </Link>
+              <Link
                 href="/start-sangha"
                 className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
@@ -161,6 +167,12 @@ export default function Navigation() {
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             Contact
+          </Link>
+          <Link
+            href="/room-opening"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
+          >
+            Room Opening
           </Link>
           <Link
             href="/start-sangha"
