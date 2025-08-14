@@ -21,6 +21,16 @@ export default async function RoomOpening() {
           </p>
         </div>
 
+        {/* Contact Button */}
+        <div className="text-center">
+          <a
+            href="mailto:sanghahousela@gmail.com"
+            className="inline-flex items-center px-8 py-4 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-md hover:shadow-lg text-lg"
+          >
+            Contact us
+          </a>
+        </div>
+
         {/* Quick Details */}
         <div className="bg-green-50 rounded-lg p-6 border border-green-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,12 +112,9 @@ export default async function RoomOpening() {
             If this sounds like you, reach out and come visit the house.
           </p>
           <a
-            href="tel:4026725438"
+            href="mailto:sanghahousela@gmail.com"
             className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-md hover:shadow-lg"
           >
-            <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
             Contact us
           </a>
         </div>
