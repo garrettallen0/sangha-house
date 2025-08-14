@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
-import NewsletterSidebar from '@/components/NewsletterSidebar';
+import SidebarContent from '@/components/SidebarContent';
 import FooterWrapper from '@/components/FooterWrapper';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,7 +28,7 @@ export default function RootLayout({
             </main>
           </div>
           <aside className="w-full lg:w-[350px] px-4 lg:px-0 lg:shrink-0 lg:pt-20 flex flex-col">
-            <NewsletterSidebar />
+            <SidebarContent />
           </aside>
         </div>
         <FooterWrapper />

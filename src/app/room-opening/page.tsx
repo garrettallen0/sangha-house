@@ -113,14 +113,6 @@ export default async function RoomOpening() {
         </div>
       </div>
       
-      <Image
-        src="/room-opening.webp"
-        alt="Room Opening"
-        width={800}
-        height={600}
-        className="max-w-full h-auto rounded-lg shadow-lg"
-        priority
-      />
     </div>
   );
 } 
