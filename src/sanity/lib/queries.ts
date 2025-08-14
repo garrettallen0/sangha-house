@@ -15,4 +15,30 @@ export async function getHomepageImage() {
     data.imageUrl = builder.image(data.image).url()
   }
   return data
+}
+
+export async function getImages(category?: string) {
+  let query = `*[_type == "images"]`
+  
+  if (category) {
+    query += `[category == $category]`
+  }
+  
+  query += ` | order(order asc) {
+    _id,
+    title,
+    image,
+    alt,
+    description,
+    category,
+    order
+  }`
+  
+  const images = await client.fetch(query, category ? { category } : {})
+  
+  // Transform images to include imageUrl
+  return images.map((img: any) => ({
+    ...img,
+    imageUrl: img.image ? builder.image(img.image).url() : null
+  }))
 } 
