@@ -1,6 +1,10 @@
 import Image from 'next/image';
+import ImageCarousel from '@/components/ImageCarousel';
+import { getImages } from '@/sanity/lib/queries';
 
-export default function RoomOpening() {
+export default async function RoomOpening() {
+  const images = await getImages('room-opening');
+  
   return (
     <div className="flex flex-col items-center min-h-[60vh] space-y-8">
       <div className="max-w-4xl w-full space-y-8">
@@ -28,16 +32,8 @@ export default function RoomOpening() {
               </div>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-green-900 mb-3">Contact</h2>
-              <a
-                href="tel:4026725438"
-                className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-md hover:shadow-lg"
-              >
-                <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Contact us
-              </a>
+              <h2 className="text-xl font-semibold text-green-900 mb-3">House Gallery</h2>
+              <ImageCarousel images={images} category="room-opening" />
             </div>
           </div>
         </div>
