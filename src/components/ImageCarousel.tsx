@@ -32,6 +32,17 @@ export default function ImageCarousel({ images, category }: ImageCarouselProps) 
     return () => clearInterval(timer);
   }, [images.length]);
 
+  // Function to determine optimal aspect ratio based on image count
+  const getAspectRatio = () => {
+    if (images.length === 0) return '4/3';
+    
+    // For single image, use a more flexible ratio
+    if (images.length === 1) return '16/10';
+    
+    // For multiple images, use a balanced ratio that works well for most orientations
+    return '4/3';
+  };
+
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -55,13 +66,14 @@ export default function ImageCarousel({ images, category }: ImageCarouselProps) 
   return (
     <div className="relative">
       {/* Main Image */}
-      <div className="relative h-48 w-full overflow-hidden rounded-lg">
+      <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: getAspectRatio() }}>
         <Image
           src={images[currentIndex].imageUrl}
           alt={images[currentIndex].alt}
           fill
-          className="object-cover transition-transform duration-500 ease-in-out"
+          className="object-contain transition-transform duration-500 ease-in-out bg-gray-100"
           priority={currentIndex === 0}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
         {/* Image Info Overlay */}
