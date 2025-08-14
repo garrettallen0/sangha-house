@@ -27,6 +27,12 @@ export default defineType({
       description: 'Important for SEO and accessibility',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Order for displaying images in the carousel (lower numbers appear first)',
+    }),
   ],
   preview: {
     select: {

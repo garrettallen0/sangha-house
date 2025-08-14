@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Featured from '@/components/Featured'
-import { getHomepageImage } from '@/sanity/lib/queries'
+import HomePageCarousel from '@/components/HomePageCarousel'
+import { getHomepageImages } from '@/sanity/lib/queries'
 
 export default async function Home() {
-  const homepageImage = await getHomepageImage()
+  const homepageImages = await getHomepageImages()
 
   return (
     <>
@@ -33,17 +33,7 @@ export default async function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8 mt-4">
           <Featured />
           <section className="py-6 sm:py-12">
-            <div className="relative w-full h-[300px] sm:h-[400px]">
-              {homepageImage?.imageUrl && (
-                <Image
-                  src={homepageImage.imageUrl}
-                  alt={homepageImage.alt || 'Sangha House LA'}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain rounded-lg"
-                />
-              )}
-            </div>
+            <HomePageCarousel images={homepageImages} />
           </section>
         </div>
       </div>
