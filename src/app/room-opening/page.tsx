@@ -39,7 +39,7 @@ export default async function RoomOpening() {
               <div className="space-y-2 text-green-800">
                 <p><strong>Move in:</strong> Sept. 1st</p>
                 <p><strong>Rent:</strong> $980 + utilities</p>
-                <p><strong>Office:</strong> Option to add 80 sqft office for $100 / month
+                <p><strong>Office:</strong> Option to add office for $100 / month
                 </p>
                 <p>(Note: The office is not available for rent separately.)</p>
               </div>
