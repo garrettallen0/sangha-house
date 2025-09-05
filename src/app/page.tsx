@@ -29,13 +29,12 @@ export default async function Home() {
 
       {/* Main Content */}
       <div>
-        {/* Featured and Image Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-8 mt-4">
-          <Featured />
-          <section className="py-6 sm:py-12">
+        {/* Homepage Carousel Section */}
+        <section className="mt-16">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <HomePageCarousel images={homepageImages} />
-          </section>
-        </div>
+          </div>
+        </section>
 
         {/* Three Info Panels */}
         <div className="mt-16">
