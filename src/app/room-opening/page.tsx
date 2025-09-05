@@ -10,15 +10,15 @@ export default async function RoomOpening() {
       <div className="max-w-4xl w-full space-y-8">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4 line-through">
             Room Opening Sept. 1st!
           </h1>
-          <p className="text-lg text-gray-600">
-          Sangha House LA is looking for a housemate and community member!
+          <p className="text-lg text-gray-600 mb-4">
+            We found a housemate! 🎉
           </p>
-          <p className="text-lg text-gray-600">
-            We are a small mindfulness intentional community of 6 people. One of our current community members is moving out and we are looking for a new one.
-          </p>
+                      <p className="text-lg text-gray-600">
+              However, we're always interested in building our community — eventually, we'd like to have a bigger house, or two houses! If you're interested, come join us for Wednesday meditation or reach out to us by email.
+            </p>
         </div>
 
         {/* Contact Button */}
