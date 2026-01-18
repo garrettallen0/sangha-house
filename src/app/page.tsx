@@ -8,16 +8,20 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Heading */}
       <section className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl pb-6">
           Sangha House LA
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600 max-w-xs mx-auto">
+      </section>
+
+      {/* Subtitle Text */}
+      <section className="text-center">
+        <p className="text-lg leading-8 text-gray-600 max-w-xs mx-auto">
           <span className="block">We are an intentional community</span>
           <span className="block">in the <a 
             href="https://plumvillage.org/#filter=.region-na"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-indigo-600"
           >
