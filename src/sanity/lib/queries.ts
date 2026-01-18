@@ -59,4 +59,19 @@ export async function getImages(category?: string) {
     ...img,
     imageUrl: img.image ? builder.image(img.image).url() : null
   }))
+}
+
+export async function getBannerImage() {
+  const query = `*[_type == "bannerImage"][0] {
+    _id,
+    title,
+    image,
+    alt
+  }`
+  
+  const data = await client.fetch(query)
+  if (data?.image) {
+    data.imageUrl = builder.image(data.image).url()
+  }
+  return data
 } 
