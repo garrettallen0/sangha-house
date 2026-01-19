@@ -38,7 +38,7 @@ export default function Banner() {
 
   return (
     <section className="w-full mb-8">
-      <div className="relative w-full" style={{ aspectRatio: '16/2' }}>
+      <div className="relative w-full aspect-[16/2] md:aspect-[30/2]">
         <Image
           src={bannerImage.imageUrl}
           alt={bannerImage.alt || bannerImage.title || 'Banner image'}
