@@ -46,7 +46,7 @@ export default async function Home() {
             {/* Weekly Meditation Panel */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Walk for Peace LA
+                🎉 Walk for Peace LA 🎉
               </h3>
               <p className="text-gray-600">
                 We are co-organizing Walk for Peace LA, a silent, meditative walk inspired by and in honor of the Theravāda Buddhist  monks' pilgrimage to DC.
