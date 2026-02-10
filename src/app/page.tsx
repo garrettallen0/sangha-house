@@ -46,14 +46,14 @@ export default async function Home() {
             {/* Weekly Meditation Panel */}
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Weekly Meditation
+                Walk for Peace LA
               </h3>
               <p className="text-gray-600">
-                We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.
+                We are co-organizing Walk for Peace LA, a silent, meditative walk inspired by and in honor of the Theravāda Buddhist  monks' pilgrimage to DC.
               </p>
               <div className="mt-4">
                 <a
-                  href="/events"
+                  href="https://www.walkforpeacela.com/"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
                 >
                   Learn more
