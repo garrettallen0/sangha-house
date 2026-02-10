@@ -42,9 +42,9 @@ export default async function Home() {
 
         {/* Three Info Panels */}
         <div className="mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {/* Weekly Meditation Panel */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 🎉 Walk for Peace LA 🎉
               </h3>
@@ -64,8 +64,29 @@ export default async function Home() {
               </div>
             </div>
 
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Weekly Meditation
+              </h3>
+              <p className="text-gray-600">
+                <span className="line-through">We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.</span>{' '}
+                <span className="font-bold">🎉 Canceled this week due to Walk for Peace LA 🎉</span>
+              </p>
+              <div className="mt-4">
+                <a
+                  href="/events"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
+                >
+                  Learn more
+                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
             {/* Dharma Panel */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 Dharma
               </h3>
@@ -86,7 +107,7 @@ export default async function Home() {
             </div>
 
             {/* Sangha Panel */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center">
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 Sangha
               </h3>
