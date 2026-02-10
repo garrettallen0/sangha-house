@@ -53,7 +53,9 @@ export default async function Home() {
               </p>
               <div className="mt-4">
                 <a
-                  href="https://www.walkforpeacela.com/"
+                  href="https://luma.com/2w3i6xxl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
                 >
                   Learn more
