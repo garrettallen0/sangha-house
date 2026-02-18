@@ -30,7 +30,7 @@ export default function Navigation() {
                 Events
               </Link>
               <a
-                href="https://luma.com/2w3i6xxl"
+                href="https://walkforpeacela.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
