@@ -44,35 +44,13 @@ export default async function Home() {
         <div className="mt-16">
           <div className="flex flex-wrap justify-center gap-6">
             {/* Weekly Meditation Panel */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                🎉 Walk for Peace LA 🎉
-              </h3>
-              <p className="text-gray-600">
-                We are co-organizing Walk for Peace LA, a silent, meditative walk inspired by and in honor of the Theravāda Buddhist  monks' pilgrimage to DC.
-              </p>
-              <div className="mt-4">
-                <a
-                  href="https://luma.com/2w3i6xxl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
-                >
-                  Learn more
-                  <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
 
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 text-center w-full md:w-[calc(33.333%-1rem)] max-w-sm">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 Weekly Meditation
               </h3>
               <p className="text-gray-600">
-                <span className="line-through">We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.</span>{' '}
-                <span className="font-bold">🎉 Canceled this week due to Walk for Peace LA 🎉</span>
+                <span className="">We host a weekly meditation on Wednesdays at 7 PM at our house in Echo Park. Open to all.</span>{' '}
               </p>
               <div className="mt-4">
                 <a
