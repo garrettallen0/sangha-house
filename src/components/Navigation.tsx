@@ -171,7 +171,7 @@ export default function Navigation() {
             Events
           </Link>
           <a
-            href="https://luma.com/2w3i6xxl"
+            href="https://walkforpeacela.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
