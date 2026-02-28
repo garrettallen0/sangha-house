@@ -38,6 +38,12 @@ export default function Navigation() {
                 🎉 Walk for Peace LA 🎉
               </a>
               <Link
+                href="/donate"
+                className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                Donate
+              </Link>
+              <Link
                 href="/contact"
                 className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
@@ -178,6 +184,12 @@ export default function Navigation() {
           >
             🎉 Walk for Peace LA 🎉
           </a>
+          <Link
+            href="/donate"
+            className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
+          >
+            Donate
+          </Link>
           <Link
             href="/contact"
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
