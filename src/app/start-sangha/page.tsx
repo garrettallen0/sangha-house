@@ -1,8 +1,4 @@
-const pillars = [
-  { label: 'living in community', size: 'h-40 w-40 sm:h-44 sm:w-44' },
-  { label: 'organizing social action', size: 'h-44 w-44 sm:h-48 sm:w-48' },
-  { label: 'grounded in spiritual practice', size: 'h-48 w-48 sm:h-52 sm:w-52' },
-] as const
+import VennBubbles from '@/components/VennBubbles'
 
 export default function StartSangha() {
   return (
@@ -27,19 +23,7 @@ export default function StartSangha() {
           </li>
         </ul>
 
-        <ul className="mt-12 flex flex-wrap items-center justify-center gap-8 sm:gap-10 list-none p-0">
-          {pillars.map(({ label, size }) => (
-            <li key={label}>
-              <div
-                className={`${size} flex items-center justify-center rounded-full border-2 border-indigo-300/80 bg-white/60 px-4 shadow-sm transition-transform duration-300 ease-out hover:scale-105 hover:shadow-md`}
-              >
-                <span className="text-center text-sm font-medium leading-snug text-indigo-900 sm:text-base">
-                  {label}
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <VennBubbles />
       </div>
 
       <div className="mt-16 space-y-12">
