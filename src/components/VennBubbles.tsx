@@ -9,7 +9,7 @@ const ORBIT_DURATION_S = 10
 export default function VennBubbles() {
   return (
     <section
-      className="relative mx-auto mt-12 aspect-square w-full max-w-96 sm:max-w-[26rem]"
+      className="relative mx-auto aspect-square w-full max-w-96 sm:max-w-[26rem]"
       aria-label="Living in community, organizing social action, and grounded in spiritual practice"
     >
       <div className="absolute inset-0 flex items-center justify-center">
