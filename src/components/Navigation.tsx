@@ -1,10 +1,18 @@
 'use client'
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="bg-green-100 shadow-sm sticky top-0 z-50">
@@ -53,7 +61,7 @@ export default function Navigation() {
                 href="/start-sangha"
                 className="border-transparent text-indigo-700 hover:border-indigo-300 hover:text-indigo-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
-                Start a Sangha House{' '}
+                Intentional Community Sangha{' '}
                 <svg
                   className="ml-1 h-4 w-4"
                   fill="none"
@@ -160,12 +168,14 @@ export default function Navigation() {
         <div className="pt-2 pb-3 space-y-1 bg-green-100">
           <Link
             href="/about"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             About
           </Link>
           <Link
             href="/events"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             Events
@@ -174,27 +184,31 @@ export default function Navigation() {
             href="https://walkforpeacela.com/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             🎉 Walk for Peace LA 🎉
           </a>
           <Link
             href="/donate"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             Donate
           </Link>
           <Link
             href="/contact"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             Contact
           </Link>
           <Link
             href="/start-sangha"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
-            Start a Sangha House{' '}
+            Intentional Community Sangha{' '}
             <svg
               className="inline-block ml-1 h-4 w-4"
               fill="none"
@@ -215,6 +229,7 @@ export default function Navigation() {
             href="https://www.instagram.com/sanghahousela/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             <span className="sr-only">Instagram</span>
@@ -235,6 +250,7 @@ export default function Navigation() {
             href="https://sanghahousela.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={closeMenu}
             className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300 hover:text-indigo-900"
           >
             <span className="sr-only">Newsletter</span>

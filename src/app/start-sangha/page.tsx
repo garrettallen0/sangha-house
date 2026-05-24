@@ -8,7 +8,7 @@ export default function StartSangha() {
           Intentional Community Sangha
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          We are co-organizing an sangha for those living in engaged Buddhist intentional community.
+          We are co-organizing a virtual sangha for those living in engaged Buddhist intentional community.
         </p>
         <a
           href="https://forms.gle/1nnXDZWQFMJbpHkPA"
