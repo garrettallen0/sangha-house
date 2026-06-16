@@ -17,7 +17,7 @@ export default async function Home() {
 
       {/* Subtitle Text */}
       <section className="text-center">
-        <p className="mx-auto max-w-xl text-lg leading-8 text-gray-600">
+        <p className="mx-auto max-w-sm text-lg leading-8 text-gray-600">
           We are an intentional community grounded in the{' '}
           <a
             href="https://plumvillage.org/#filter=.region-na"
