@@ -10,7 +10,7 @@ export default async function RoomOpening() {
       <div className="max-w-4xl w-full space-y-8">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4 line-through">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">
             Room Opening Sept. 1st!
           </h1>
           <p className="text-lg text-gray-600 mb-4">
