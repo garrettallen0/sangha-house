@@ -36,9 +36,6 @@ export default async function RoomOpening() {
               <div className="space-y-2 text-green-800">
                 <p><strong>Move in:</strong> Sept. 1st</p>
                 <p><strong>Rent:</strong> $980 + utilities</p>
-                <p><strong>Office:</strong> Option to add office for $100 / month
-                </p>
-                <p>(Note: The office is not available for rent separately.)</p>
               </div>
             </div>
             <div>
@@ -50,10 +47,9 @@ export default async function RoomOpening() {
 
         {/* Room Details */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">About the room + office</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">About the room</h2>
           <div className="space-y-3 text-gray-700">
-            <p>120 sqft room with closet. Wood panel floors. Quiet, on the back of the house, with a window to the backyard. Shared bathroom.</p>
-            <p>Possibility of adding a 80 sqft office on the main floor for $100 / month. Wood panel floors. Double doors to the backyard. (The office is not available for rent separately.)</p>
+            <p>120 sqft room with closet. Wood panel floors. On the back of the house, with a window to the backyard. Shared bathroom.</p>
           </div>
         </div>
 
