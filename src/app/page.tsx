@@ -15,6 +15,31 @@ export default async function Home() {
         </h1>
       </section>
 
+      {/* Meditation cancellation notice */}
+      <section className="relative isolate mx-auto mb-8 max-w-2xl rounded-lg p-[2px]">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-[3px] -z-10 rounded-[0.65rem] bg-brown-shift-glow bg-[length:300%_300%] opacity-70 blur-[8px] animate-border-shift motion-reduce:animate-none"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-lg bg-brown-shift bg-[length:300%_300%] animate-border-shift motion-reduce:animate-none"
+        />
+        <div className="relative z-10 rounded-[calc(0.5rem-2px)] bg-amber-50 px-4 py-4 text-center text-sm leading-relaxed text-amber-950 sm:px-5 sm:text-base">
+          <p>
+            We will have no meditation at the Sangha House 8/12 and 8/19. Please check the WhatsApp or{' '}
+            <a
+              href="mailto:sanghahousela@gmail.com"
+              className="font-medium underline hover:text-amber-800"
+            >
+              email us
+            </a>{' '}
+            for further announcements.
+          </p>
+          <p className="mt-2 font-bold">We will begin again Wednesday, 8/26.</p>
+        </div>
+      </section>
+
       {/* Subtitle Text */}
       <section className="text-center">
         <p className="mx-auto max-w-sm text-lg leading-8 text-gray-600">
